@@ -1369,7 +1369,3 @@ body {
 .form-control:focus {
    border-color: #FFD9CE !important;
 }
-
-footer {
-  position: fixed;   
-}
