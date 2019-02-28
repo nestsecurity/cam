@@ -1,19 +1,40 @@
 *{
  margin: 0;
  padding: 0;
- box-sizing: border-box;   
+ box-sizing: border-box;
 }
 
-body {
+html {
+ /*overflow-x: hidden;  */
+}
+
+body{
     direction: ltr;
     text-align: left;
     font-family: 'Laila', serif;
-    background-image: url("https://tctechcrunch2011.files.wordpress.com/2017/08/nest-wall.jpg");
-    background-position: left;
-    background-repeat: repeat;
-    background-size: cover;
-    color: #1D2D44;
+    background-image: url("https://www.objeko.com/wp-content/uploads/2016/06/thermostat-Nest-1.jpg");
+    width: 100%;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overshadow {
+  background-color: rgba(204,201,195,0.5);
+  background-repeat: repeat-y;
+  background-size: cover;
+  min-height: 200vh;
+  width: 100vw;
+  top: 0;
+}
+
+#date {
+  margin: 0.5rem;
+  font-family: 'Laila', serif;
+  font-size: 1.2rem;
+  
 }
 
 .hide {
@@ -1224,7 +1245,7 @@ body {
   height: 100%;
   margin-right: -250px;
   overflow-y: auto;
-  background: rgba(165,155,154,0.8);  
+  background: rgba(232,232,232,0.9);  
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1238,7 +1259,7 @@ body {
 #page-content-wrapper {
   width: 100%;
   position: absolute;
-  padding: 15px;
+  padding: 0.5rem;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -1273,7 +1294,7 @@ body {
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(73,73,73,0.5);
 }
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
@@ -1291,7 +1312,7 @@ body {
 }
 
 .sidebar-nav>.sidebar-brand a:hover {
-  color: #fff;
+  color: rgba(73,73,73,0.5);
   background: none;
 }
 
@@ -1365,7 +1386,56 @@ body {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 10px 10px 24px -7px rgba(0,0,0,0.75);
+    margin-bottom: 0.5rem;
 }
 .form-control:focus {
    border-color: #FFD9CE !important;
+} 
+
+.small-form {
+    display: block;
+    width: 10rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+}
+
+.smaller-form {
+    width: 10rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+}
+
+.digital-clock {
+  margin-left: auto;
+  margin-top: 0.5rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 7rem;
+  height: 1.7rem;
+  color: #ffffff;
+  border: transparent;
+  border-radius: 4px;
+  text-align: center;
+  font: 1.4rem 'DIGITAL', Helvetica;
+  background: linear-gradient(90deg, #ced4da, #BAC0C6);
+}
+
+.pt-6 {
+  padding-top: 4rem;
 }
