@@ -15,12 +15,16 @@
 </head>
     
 <body>
-  <nav class="navbar fixed-top navbar-expand navbar-light bg-light"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon ml-auto"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <nav class="navbar fixed-top navbar-expand navbar-light bg-light">
+      <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon ml-auto"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarsExample02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"> <a class="nav-link" href="http://nest.com" target="_blank">
                         <img src="nest.png" height="25" width="50">
-                    </a></li>
+                    </a>
+                    </li>
+                    <div class="digital-clock ml-3">00:00:00</div>
+                     <div class="ml-3" id="date"></div>
                 </ul>
                 <form class="form-inline my-2 my-md-0"> </form>
             </div>
@@ -30,35 +34,42 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
-                    <li> <a href="#">Dashboard</a> </li>
-                    <li> <a href="#">Shortcuts</a> </li>
-                    <li> <a href="#">Overview</a> </li>
-                    <li> <a href="#">Events</a> </li>
-                    <li> <a href="#">About</a> </li>
-                    <li> <a href="#">Services</a> </li>
-                    <li> <a href="#">Contact</a> </li>
-                </ul>
+                    <div class="clock"></div>
+                    <li class="sidebar-brand mt-5"> <a href="#"> Quick Links </a> </li>
+                    <li> <a href="https://nest.com/support/" target="_blank">Nest Support</a> </li>
+                    <li> <a href="https://store.nest.com/" target="_blank">Nest Store</a> </li>
+                    <li> <a href="https://nest.com/where-to-buy" target="_blank">Where to Buy</a> </li>
+                    <li> <a href="https://nest.com/rebates-and-rewards/" target="_blank">Rebates and Rewards</a> </li>
+                    <li> <a href="https://sites.google.com/corp/google.com/gta-landing-page/toolstrackers?authuser=0" target="_blank">Tools and Tracker </a></li>
+                    <li><a href="https://sites.google.com/corp/google.com/gta-landing-page/links?authuser=0" target="_blank">Helpful Links</a> </li>
+                    <li> <a href="https://sites.google.com/corp/google.com/gta-landing-page/thermostat?authuser=0" target="blank">KB Nest Thermostat</a> </li>
+                    <li> <a href="https://sites.google.com/corp/google.com/gta-landing-page/protect?authuser=0" target="_blank">KB Nest Protect</a> </li>
+                    <li> <a href="https://nest.com/thermostats/nest-learning-thermostat/tech-specs/" target="_blank">NLT Specs</a></li>
+                    <li> <a href="https://nest.com/thermostats/nest-thermostat-e/tech-specs/" target="_blank">NTE Specs</a></li>
+                    <li> <a href="https://nest.com/thermostats/nest-thermostat-e/tech-specs/#temperature-sensor-heading" target="_blank">Nest Sensor Specs</a></li>
+                    <li> <a href="https://nest.com/support/article/Frequently-asked-questions-about-Nest-Aware-with-Video-History" target="_blank">Nest Aware FAQ's</a></li>
+                    
+                </ul> 
             </div> <!-- /#sidebar-wrapper -->
             
             <!-- Page Content -->
             <div id="page-content-wrapper">
+               <div class="overshadow">
                 <div class="container-fluid">
-                    <h1 class="text-center mt-5"><a href="#" class="links">Case Notes</a></h1>
+                    <h1 class="text-center pt-6"><a href="#" class="links">Case Notes</a></h1>
                     
 <div class="row">    
-<div class="col-9">
+<div class="col-md-9 col-lg-6 offset-lg-4">
 <h4>Customer Info:</h4>
 <form id="myForm">
   <div class="form-group">
-    <label>Full Name </label>
+    <label>Full Name: </label>
     <input type="text" class="form-control" placeholder="First Name Last Name" id="fname">
     
-    
-    <label>Phone Number </label>
+    <label>Phone Number: </label>
     <input type="text" class="form-control" placeholder="+8123456789" id="pnumber">
   
-    <label>Email Address </label>
+    <label>Email Address: </label>
     <input type="email" class="form-control"  placeholder="nest@email.com" id="eadd">
     
     <label>Previous Case Number: </label>
@@ -77,15 +88,106 @@
   <h4>Investigation:</h4>
   <div class="form-group">
     <label>When did the issue start? </label>
-    <input type="email" class="form-control" id="in1">
+    <input type="text" class="form-control" id="in1">
     <label>When was the Nest installed? </label>
-    <input type="email" class="form-control" id="in2">
+    <input type="text" class="form-control" id="in2">
     <label>Issue Frequency: </label>
-    <input type="email" class="form-control" id="in3">
+    <input type="text" class="form-control" id="in3">
     <label>Further Probing: </label>
     <textarea class="form-control" rows="3" id="in4"></textarea>
+  
+  <div class="form-group">
+    <label for="device">Device: </label>
+    <select class="form-control" id="device">
+      <option value="1">Choose Nest Device for Configuration</option>
+      <option value="2">Nest Learning Thermostat</option>
+      <option value="3">Nest Thermostat E</option>
+      <option value="4">Nest Protect</option>
+    </select>
   </div>
   
+<div class="hide" id="config">
+  <h4 class="mt-3 mb-2">Configuration:</h4>  
+      <label class="mt-2">Wiring and Color: </label>
+<div class="row">
+    <div class="col-4 mt-2 mb-4">
+<!-- Default unchecked -->
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="Y1" id="y1">
+    <label class="custom-control-label" for="y1">Y1</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="Y2" id="y2">
+    <label class="custom-control-label" for="y2">Y2</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="G" id="g">
+    <label class="custom-control-label" for="g">G</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="OB" id="ob">
+    <label class="custom-control-label" for="ob">OB</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="RC" id="rc">
+    <label class="custom-control-label" for="rc">Rc</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="W1" id="w1">
+    <label class="custom-control-label" for="w1">W1</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="W2" id="w2">
+    <label class="custom-control-label" for="w2">W2/Aux</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="C" id="c">
+    <label class="custom-control-label" for="c">C</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="*" id="star">
+    <label class="custom-control-label" for="star">*</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" name="wiring" value="RH" id="rh">
+    <label class="custom-control-label" for="rh">Rh</label>
+</div>      
+  </div> <!-- End of col -->    
+ 
+ <div class="col-6 mt-2 mb-4">
+    <input type="text" class="small-form" name="color" id="input-y1">
+    <input type="text" class="small-form" name="color" id="input-y2">
+    <input type="text" class="small-form" name="color" id="input-g">
+    <input type="text" class="small-form" name="color" id="input-ob">
+    <input type="text" class="small-form" name="color" id="input-rc">
+    <input type="text" class="small-form" name="color" id="input-w1">
+    <input type="text" class="small-form" name="color" id="input-w2">
+    <input type="text" class="small-form" name="color" id="input-c">
+    <input type="text" class="small-form" name="color" id="input-star">
+    <input type="text" class="small-form" name="color" id="input-rh"> 
+ </div> <!-- End of col -->
+     </div> <!-- End of row --> 
+
+    <label class="mt-2">Power Reading: </label>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-5">
+        <label>BATT:</label>
+        <input type="text" class="smaller-form" id="battery"> <br>
+        <label>VOC:</label>
+        <input type="text" class="smaller-form" id="voc"> <br>
+      </div> <!--End of col-->
+      
+      <div class="col-5">
+        <label>VIN:</label>
+        <input type="text" class="smaller-form" id="vin"> <br>
+        <label>LIN:</label>
+        <input type="text" class="smaller-form" id="lin"> <br>
+      </div> <!--End of col-->
+    </div> <!--End of row-->
+  </div> <!--End of form-group-->  
+</div> <!--End of hide--> 
+
    <h2>Troubleshooting:</h2>
    <div class="form-group">
     <label>Troubleshooting steps and results:</label>
@@ -130,107 +232,20 @@
 
 </footer>
 <!-- Footer -->                      
-                    
-<script>    
-$("#submit-btn").click(function(){
-     $('html, body').animate({
-        scrollTop: eval($("#buttons").offset().top-200)
-    	}, 500);
-    $("#copy-btn").show();
-let fname = $("#fname").val();
-let pnumber = $("#pnumber").val();
-let eadd = $("#eadd").val();
-let pcase = $("#pcase").val();
-let sn = $("#sn").val();
-let issue = $("#issue").val();
-let in1 = $("#in1").val();
-let in2 = $("#in2").val();
-let in3 = $("#in3").val();
-let in4 = $("#in4").val();
-let ts = $("#ts").val();
-let rs = $("#rs option:selected" ).text();
-let resolution = $("#resolution").val();
-let ft = $("#ft").val();
-   $("#submit-case").remove(); 
-   $(".case").after("<textarea class='form-control mb-3' rows='30' id='submit-case'></textarea>");
-   $("#submit-case").val("\n===== CUSTOMER INFO ===== \n Full Name: " + fname + "\n Phone Number: " + pnumber + "\n E-mail Address: " + eadd + "\n Previous Case: " + pcase + "\nSerial Number: " + sn + "\n\n===== CUSTOMER STATEMENT=====\n •What's the issue? \n" + issue + "\n\n===== INVESTIGATION =====\n •When did the issue start? " + in1 + "\n•When was the Nest installed? " + in2 + "\n•Issue frequency: " + in3 + "\n•Further probing: " + in4 + "\n\n=====TROUBLESHOOTING =====\n Troubleshooting steps and results: \n" + ts + "\n\n ===== RESOLUTION =====\n •Can you confirm/test if it's working now? (Y/N) " + rs + "\n •What resolved the issue: " + resolution + "\n\n ===== NOTES FOR THE NEXT AGENT ===== \n• Further troubleshooting steps: " + ft);
-});    
-
-$("#reset-btn").click(function(){ 
-  $('html, body').animate({scrollTop:0}, '300');
-  $('#myForm')[0].reset();
-  $("#submit-case").remove();
-  $("#copy-btn").hide();  
-});
-    
-$("#ts").focus(function() {
-    if(document.getElementById('ts').value === ''){
-        document.getElementById('ts').value +='• ';
-	}
-});
-$("#ts").keyup(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        document.getElementById('ts').value +='• ';
-	}
-	var txtval = document.getElementById('ts').value;
-	if(txtval.substr(txtval.length - 1) == '\n'){
-		document.getElementById('ts').value = txtval.substring(0,txtval.length - 1);
-	}
-});
-
-$("#in4").focus(function() {
-    if(document.getElementById('in4').value === ''){
-        document.getElementById('in4').value +='• ';
-	}
-});
-    
-$("#in4").keyup(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        document.getElementById('in4').value +='• ';
-	}
-	var txtval = document.getElementById('in4').value;
-	if(txtval.substr(txtval.length - 1) == '\n'){
-		document.getElementById('in4').value = txtval.substring(0,txtval.length - 1);
-	}
-});
-    
-$("#copy-btn").click(function(){
-  let copyText = $("#submit-case");
-  copyText.select();
-  document.execCommand("copy");
-});
-
-</script>                
+               
             </div> <!-- /#page-content-wrapper -->
         </div> <!-- /#wrapper -->
     
     
         <!-- Bootstrap core JavaScript -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script> <!-- Menu Toggle Script -->
-        <script>
-          $(function(){
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-
-            $(window).resize(function(e) {
-              if($(window).width()<=768){
-                $("#wrapper").removeClass("toggled");
-              }else{
-                $("#wrapper").addClass("toggled");
-              }
-            });
-          });
-           
-        </script>
+<script src="script.js"></script>        
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script> <!-- Menu Toggle Script -->
             
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+ </div> <!--end of overshadow-->
 </body>
 </html>
