@@ -129,7 +129,8 @@ $("#reset-btn").click(function(){
   $('html, body').animate({scrollTop:0}, '300');
   $('#myForm')[0].reset();
   $("#submit-case").remove();
-  $("#copy-btn").hide();  
+  $("#copy-btn").hide();
+  $("#config").hide();
 });
     
 $("#ts").focus(function() {
