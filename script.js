@@ -326,12 +326,12 @@ function timer(seconds) {
     if (missingSeconds <= 0) {
       appTimer.classList.remove('active');
       clearInterval(intervalID);
-      $("#myAudio").play();
     }
   }, 1000);
   
   $("#stop").click(function(){
     $("#time").text("00:00");
+    $("#addtimer").text("Add timer");
     appTimer.classList.remove('active');
     clearInterval(intervalID);
   });
