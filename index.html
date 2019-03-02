@@ -48,8 +48,43 @@
                     <li> <a href="https://nest.com/thermostats/nest-thermostat-e/tech-specs/" target="_blank">NTE Specs</a></li>
                     <li> <a href="https://nest.com/thermostats/nest-thermostat-e/tech-specs/#temperature-sensor-heading" target="_blank">Nest Sensor Specs</a></li>
                     <li> <a href="https://nest.com/support/article/Frequently-asked-questions-about-Nest-Aware-with-Video-History" target="_blank">Nest Aware FAQ's</a></li>
+                </ul>
+                 <main class="app">
+                      <!-- container showing the countdown as well as when the timer will end, in two headings -->
+                      <button type="button" class="btn btn-dark" id="stop">Stop</button>
+                      <div class="app__timer">
+                        <h1 id="time">00:00</h1>
+                        <h3 id="addtimer">Add timer</h3>
+                      </div>
+                      
+                      <audio id="myAudio"><source src="beep.mp3" type="audio/mpeg"></audio>
                     
-                </ul> 
+                      <!-- container allowing to select the number of minutes (or seconds) to run the timer -->
+                      <div class="app__options">
+                        <!-- immediately the option to set a custom number of minutes through a form element -->
+                        <form name="customTimer">
+                          <input
+                            name="minutes"
+                            id="minutes"
+                            type="number"
+                            min="1"
+                            placeholder="Add timer"
+                          />
+                        </form>
+                      
+                    
+                        <!-- for the other options include buttons with arbitrary values
+                          data-time is included to represent the number of seconds
+                          -->
+                        <button data-time="120">2 minutes</button>
+                        <button data-time="300">5 minutes</button>
+                        <button data-time="900">15 minutes</button>
+                        <button data-time="1800">30 minutes</button>
+                        <button data-time="3600">1 hour</button>
+                        <button data-time="5400">1 <sup>1</sup>/<sub>2</sub> hour</button>
+                        <button data-time="7200">2 hours</button>
+                      </div>
+                    </main>
             </div> <!-- /#sidebar-wrapper -->
             
             <!-- Page Content -->
