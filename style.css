@@ -11,29 +11,31 @@ html {
 body{
     direction: ltr;
     text-align: left;
-    font-family: 'Laila', serif;
-    background-image: url("https://www.objeko.com/wp-content/uploads/2016/06/thermostat-Nest-1.jpg");
+    font-family: 'Gothic A1', sans-serif;
+    background-image: url("ricky.jpg");
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    color: #ffffff;
 }
 
 .overshadow {
-  background-color: rgba(204,201,195,0.5);
+  background-color: rgba(110,11,12,0.2);
   background-repeat: repeat-y;
   background-size: cover;
-  min-height: 200vh;
+  min-height: 120vh;
   width: 100vw;
   top: 0;
 }
 
 #date {
   margin: 0.5rem;
-  font-family: 'Laila', serif;
+  font-family: 'Gothic A1', sans-serif;
   font-size: 1.2rem;
+  color: #CCFFF2;
   
 }
 
@@ -1245,7 +1247,7 @@ body {
   height: 100%;
   margin-right: -250px;
   overflow-y: auto;
-  background: rgba(232,232,232,0.9);  
+  background: rgba(82,12,4,0.9);  
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1287,14 +1289,14 @@ body {
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #2D2821;
+  color: #E1E4E8;
   margin-left: 0.5rem;  
 }
 
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
-  background: rgba(73,73,73,0.5);
+  color: #424444;
+  background: rgba(157,197,187,0.8);
 }
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
@@ -1308,11 +1310,11 @@ body {
 }
 
 .sidebar-nav>.sidebar-brand a {
-  color: #2D2821;
+  color: #E1E4E8;
 }
 
 .sidebar-nav>.sidebar-brand a:hover {
-  color: rgba(73,73,73,0.5);
+  color: #9DC5BB;
   background: none;
 }
 
@@ -1342,12 +1344,12 @@ body {
 
 .links {
   position: relative;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;  
 }
 
 .links:hover {
-  color: #000;
+  color: #CCFFF2;
 }
     
 .links:before {
@@ -1357,7 +1359,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #FFF7FC;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -1373,6 +1375,7 @@ body {
 
 .links:hover {
   text-decoration: none !important;
+  color: #FFF7FC;
 }
 
 .form-control {
@@ -1381,8 +1384,8 @@ body {
     padding: .375rem .75rem;
     font-size: 0.8rem;
     line-height: 1.7;
-    color: #495057;
-    background-color: #fff;
+    color: #FCFFFE;
+    background-color: rgba(66,68,68,0.2);
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -1391,6 +1394,9 @@ body {
 }
 .form-control:focus {
    border-color: #FFD9CE !important;
+   background-color: rgba(66,68,68,0.2);
+   color: #FCFFFE;
+   font-size: 1rem;
 } 
 
 .small-form {
@@ -1433,21 +1439,11 @@ body {
   border-radius: 4px;
   text-align: center;
   font: 1.4rem 'DIGITAL', Helvetica;
-  background: linear-gradient(90deg, #ced4da, #BAC0C6);
+  background: linear-gradient(90deg, #9DC5BB, #424444);
 }
 
 .pt-6 {
   padding-top: 4rem;
-}
-
-:root {
-  --font-timer: "Ubuntu", sans-serif;
-  --font-body: "Open Sans", sans-serif;
-  --color-highlight: #f5f4f4;
-  --color-text: #1f1c1c;
-  --color-bg: #c7c5c5;
-  --color-bg-l: #ebebeb;
-  --color-app: #fff;
 }
 
 .app {
