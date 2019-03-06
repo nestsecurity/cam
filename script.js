@@ -125,11 +125,15 @@ $("#lin").focus(function(){
    $(this).val("mA");
 });
 
-$("#reset-btn").click(function(){ 
+$("#reset-btn").click(function(){   
+  $("#reset").modal('show');
+    $("#yes").click(function() {
   $('html, body').animate({scrollTop:0}, '300');
   $('#myForm')[0].reset();
   $("#submit-case").remove();
-  $("#copy-btn").hide();  
+  $("#copy-btn").hide();
+  $("#reset").modal('hide');
+  });
 });
     
 $("#ts").focus(function() {
