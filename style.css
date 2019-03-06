@@ -1,4 +1,4 @@
-*{
+n*{
  margin: 0;
  padding: 0;
  box-sizing: border-box;
@@ -12,7 +12,7 @@ body{
     direction: ltr;
     text-align: left;
     font-family: 'Laila', serif;
-    background-image: url("https://www.objeko.com/wp-content/uploads/2016/06/thermostat-Nest-1.jpg");
+    background-image: url("enjo.png");
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
