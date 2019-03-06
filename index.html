@@ -242,9 +242,31 @@
 
 <div class="mb-3" id="buttons">
 <button type="button" class="btn btn-dark my-3 mx-2" id="submit-btn">Submit</button>
-<button type="button" class="btn btn-light my-3 mx-2" id="reset-btn">Reset</button>
+<button type="button" class="btn btn-light my-3 mx-2" id="reset-btn" data-toggle="modal" data-target="#reset">Reset</button>
 <button type="button" class="btn btn-info my-3 mx-2 hide" id="copy-btn" style="display: none;">Copy</button>    
- </div>    
+ </div>
+
+<!-- Modal -->  
+
+<div class="modal fade" id="reset" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to reset the data?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-outline-info" id="yes">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>    
 
     
     <div class="case"></div>
